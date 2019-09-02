@@ -86,10 +86,12 @@ data () {
 
 ## npm 包更新
 
+### 通过修改包版本更新
+
 1. 修改包的版本（package.json 里的 version 字段）
 2. npm publish
 
-同时 npm 有一套自己的版本控制标准——Semantic versioning（语义化版本）
+### 同时 npm 有一套自己的版本控制标准——Semantic versioning（语义化版本）
 
 具体体现为：
 
@@ -103,4 +105,4 @@ data () {
 
 update_type 为 patch, minor, or major 其中之一，分别表示补丁，小改，大改
 
-![](https://images2015.cnblogs.com/blog/1060770/201706/1060770-20170609202952606-1996233874.png)
+![https://images2015.cnblogs.com/blog/1060770/201706/1060770-20170609202952606-1996233874.png]()

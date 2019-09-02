@@ -105,4 +105,4 @@ data () {
 
 update_type 为 patch, minor, or major 其中之一，分别表示补丁，小改，大改
 
-![https://images2015.cnblogs.com/blog/1060770/201706/1060770-20170609202952606-1996233874.png]()
+![](./src/assets/1060770-20170609202952606-1996233874.png)

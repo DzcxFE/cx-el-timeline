@@ -2,6 +2,7 @@
   <div class="cx-el-timeline">
     <el-dialog :title="title"
                :visible.sync="isShow"
+               @close="close"
                :width="width">
 
       <div class="timeline-content">
@@ -57,7 +58,7 @@
 
       <span slot="footer"
             class="dialog-footer">
-        <el-button @click="isShow = false">知道了</el-button>
+        <el-button @click="$emit('update:dialogVisible', false)">知道了</el-button>
       </span>
     </el-dialog>
   </div>
@@ -102,8 +103,16 @@ export default {
   },
   data () {
     return {
-      isOpen: [],
-      isShow: this.dialogVisible
+      isOpen: []
+    }
+  },
+  computed: {
+    isShow: {
+      get () {
+        return this.dialogVisible
+      },
+      set () {
+      }
     }
   },
   created () {
@@ -112,6 +121,9 @@ export default {
     }
   },
   methods: {
+    close () {
+      this.$emit('update:dialogVisible', false)
+    },
     handleOpen (index) {
       this.isOpen.splice(index, 1, !this.isOpen[index])
     },

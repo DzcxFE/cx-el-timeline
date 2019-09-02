@@ -3,7 +3,8 @@
     <time-line title="车辆推送详情"
                :headerData='headerData'
                :bodyData='bodyData'
-               :dialogVisible='tlShow'></time-line>
+               :dialogVisible.sync='tlShow'></time-line>
+    <button @click="xxx">组件展示</button>
   </div>
 </template>
 
@@ -14,9 +15,14 @@ import timeLine from './packages/index.js'
 Vue.use(timeLine)
 
 export default {
+  methods: {
+    xxx () {
+      this.tlShow = true
+    }
+  },
   data () {
     return {
-      tlShow: true,
+      tlShow: false,
       headerData: [
         {
           orderNumber: 123123123,

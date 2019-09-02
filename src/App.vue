@@ -30,27 +30,31 @@ export default {
           driver: 'wushain'
         }
       ],
-      bodyData: [{
-        description: '支持使用图标',
-        content: '这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容',
-        timestamp: '2018-04-12 20:46',
-        isOpen: true,
-        size: 'large'
-      }, {
-        description: '支持自定义颜色',
-        content: '这是内容这是内容这是内容这是内容这<br>是内容这是内容',
-        timestamp: '2018-04-03 20:46',
-        isOpen: false,
-        color: '#FF352F'
-      }, {
-        description: '支持自定义尺寸',
-        content: '这是内容这是内容这是内容这是内容这是内容这是内容',
-        timestamp: '2018-04-03 20:46',
-        isOpen: false,
-        size: 'large',
-        color: '#F8A51C'
-      }]
+      bodyData: []
     }
+  },
+  mounted () {
+    setTimeout(() => {
+      this.bodyData = [{
+        color: "#E5E7ED",
+        content: "",
+        description: "2019-08-29 10:11:41",
+        isOpen: true,
+        timestamp: "推送订单,抢单模式未开启指派",
+      }, {
+        color: "#E5E7ED",
+        content: "推送已送达",
+        description: "2019-08-29 10:11:43",
+        isOpen: false,
+        timestamp: "推送已送达",
+      }, {
+        color: "#FF352F",
+        content: "订单反馈健康状态为null",
+        description: "2019-08-29 10:11:42",
+        isOpen: true,
+        timestamp: "订单反馈健康状态为null",
+      }]
+    }, 2000);
   },
   name: 'app',
   components: {

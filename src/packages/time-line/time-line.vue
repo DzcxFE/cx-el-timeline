@@ -33,16 +33,19 @@
                               placement="top">
               <div>
                 <h4>{{ item.description }}</h4>
-                <a v-if="isOpen[index]"
-                   @click="handleOpen(index)"
-                   class="open-down">收起
-                  <i class="el-icon-arrow-up"></i>
-                </a>
-                <a v-else
-                   @click="handleOpen(index)"
-                   class="open-up">展开
-                  <i class="el-icon-arrow-down"></i>
-                </a>
+
+                <template v-if="item.content">
+                  <a v-if="isOpen[index]"
+                     @click="handleOpen(index)"
+                     class="open-down">收起
+                    <i class="el-icon-arrow-up"></i>
+                  </a>
+                  <a v-else
+                     @click="handleOpen(index)"
+                     class="open-up">展开
+                    <i class="el-icon-arrow-down"></i>
+                  </a>
+                </template>
 
                 <transition name="fade">
                   <p v-show="isOpen[index]"

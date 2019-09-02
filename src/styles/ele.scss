@@ -1,0 +1,43 @@
+// 数据监测系统的ui风格, 覆盖原element ui样式
+@import './const.scss';
+
+// el-menu
+.el-menu {
+  // height: 100%;
+  background: transparent;
+  border-right: 0;
+}
+.el-menu-item {
+  font-size: $fontSize;
+  height: 42px;
+  line-height: 42px;
+}
+.el-menu-item.is-active {
+  background-color: #2847AF !important;
+  border-left: 3px solid rgba(22,226,255,1);
+}
+.el-menu-item:focus, .el-menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+// el-button
+.el-button {
+  font-size: $fontSize;
+  padding: 9px 14px 9px 10px;
+}
+.el-button--primary {
+  background-color: $bgColor;
+  border-color: $bgColor;
+}
+
+// el-table
+.el-table th {
+  background-color: #F3F5F7;
+}
+.el-table .cell {
+  padding-left: 24px;
+}
+.el-table td, .el-table th {
+  padding: 15px 0;
+}
+// el-p

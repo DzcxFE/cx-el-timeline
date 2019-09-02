@@ -33,16 +33,16 @@
                               placement="top">
               <div>
                 <h4>{{ item.description }}</h4>
-                <p v-if="isOpen[index]"
+                <a v-if="isOpen[index]"
                    @click="handleOpen(index)"
                    class="open-down">收起
                   <i class="el-icon-arrow-up"></i>
-                </p>
-                <p v-else
+                </a>
+                <a v-else
                    @click="handleOpen(index)"
                    class="open-up">展开
                   <i class="el-icon-arrow-down"></i>
-                </p>
+                </a>
 
                 <transition name="fade">
                   <p v-show="isOpen[index]"
@@ -151,10 +151,14 @@ export default {
   }
   .el-timeline {
     padding-right: 30px;
+    padding-left: 30px;
     .open-up,
     .open-down {
+      display: inline-block;
+      text-decoration: none;
       color: #3f82ff;
       cursor: pointer;
+      margin: 8px 0;
     }
   }
   .fade-enter-active,

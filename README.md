@@ -47,7 +47,7 @@ data () {
 <time-line title="车辆推送详情"
   :headerData='headerData'
   :bodyData='bodyData'
-  :dialogVisible='tlShow'></time-line>
+  :dialogVisible.sync='tlShow'></time-line>
 ```
 
 ## Attributes

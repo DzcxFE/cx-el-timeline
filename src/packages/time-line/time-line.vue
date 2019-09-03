@@ -35,7 +35,7 @@
                 <h4>{{ item.description }}</h4>
 
                 <template v-if="item.content">
-                  <a v-if="isOpen[index]"
+                  <a v-if="item.isOpen"
                      @click="handleOpen(index)"
                      class="open-down">收起
                     <i class="el-icon-arrow-up"></i>
@@ -48,7 +48,7 @@
                 </template>
 
                 <transition name="fade">
-                  <p v-show="isOpen[index]"
+                  <p v-show="item.isOpen"
                      v-html="item.content"></p>
                 </transition>
 
@@ -106,7 +106,6 @@ export default {
   },
   data () {
     return {
-      isOpen: []
     }
   },
   computed: {
@@ -119,16 +118,13 @@ export default {
     }
   },
   created () {
-    for (const i of this.bodyData) {
-      this.isOpen.push(i.isOpen || false)
-    }
   },
   methods: {
     close () {
       this.$emit('update:dialogVisible', false)
     },
     handleOpen (index) {
-      this.isOpen.splice(index, 1, !this.isOpen[index])
+      this.bodyData[index].isOpen = !this.bodyData[index].isOpen
     },
     headerRowStyle ({ row, column, rowIndex }) {
       if (rowIndex === 0) {

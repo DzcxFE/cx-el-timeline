@@ -22,7 +22,7 @@ export default {
   },
   data () {
     return {
-      tlShow: false,
+      tlShow: true,
       headerData: [
         {
           orderNumber: 123123123,

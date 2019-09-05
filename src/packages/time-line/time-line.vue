@@ -32,7 +32,7 @@
                               :timestamp="item.timestamp"
                               placement="top">
               <div>
-                <h4>{{ item.description }}</h4>
+                <h4 v-if="item.description">{{ item.description }}</h4>
 
                 <template v-if="item.content">
                   <a v-if="item.isOpen"
@@ -45,12 +45,11 @@
                      class="open-up">展开
                     <i class="el-icon-arrow-down"></i>
                   </a>
+                  <transition name="fade">
+                    <p v-show="item.isOpen"
+                       v-html="item.content"></p>
+                  </transition>
                 </template>
-
-                <transition name="fade">
-                  <p v-show="item.isOpen"
-                     v-html="item.content"></p>
-                </transition>
 
               </div>
             </el-timeline-item>

@@ -37,22 +37,22 @@ export default {
     setTimeout(() => {
       this.bodyData = [{
         color: "#E5E7ED",
-        content: "",
-        description: "2019-08-29 10:11:41",
+        content: undefined,
+        description: "推送已送达",
         isOpen: true,
-        timestamp: "推送订单,抢单模式未开启指派",
+        timestamp: "2019-08-29 10:11:41",
       }, {
         color: "#E5E7ED",
-        content: "推送已送达",
-        description: "2019-08-29 10:11:43",
+        content: "推送已送达neirong推送已送达neirong推送已送达neirong推送已送达neirong推送已送达neirong推送已送达neirong",
+        description: "推送已送达",
         isOpen: false,
-        timestamp: "推送已送达",
+        timestamp: "2019-08-29 10:11:41",
       }, {
         color: "#FF352F",
-        content: "订单反馈健康状态为null",
-        description: "2019-08-29 10:11:42",
+        content: undefined,
+        description: undefined,
         isOpen: true,
-        timestamp: "订单反馈健康状态为null",
+        timestamp: "2019-08-29 10:11:41",
       }]
     }, 2000);
   },
